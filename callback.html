@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Extraer el token de acceso de la URL
+        var params = (new URL(document.location)).hash.split('&');
+        var accessToken = params.find(param => param.startsWith("#access_token=")).split('=')[1];
+
+        // Usar el token de acceso (por ejemplo, guardarlo en localStorage o enviarlo a tu servidor)
+        console.log("Access Token:", accessToken);
+    </script>
+</body>
+</html>
